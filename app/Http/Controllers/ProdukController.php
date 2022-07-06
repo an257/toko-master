@@ -10,6 +10,11 @@ use App\Models\ProdukImage;
 
 class ProdukController extends Controller
 {
+    public function api_produk()
+    {
+        $output = array("data" => Produk::all());
+        return response()->json($output);
+    }
     /**
      * Display a listing of the resource.
      *
