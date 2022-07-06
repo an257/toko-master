@@ -11,7 +11,7 @@
  Target Server Version : 50733
  File Encoding         : 65001
 
- Date: 01/07/2022 09:39:14
+ Date: 07/07/2022 00:44:39
 */
 
 SET NAMES utf8mb4;
@@ -299,12 +299,14 @@ CREATE TABLE `produk`  (
   INDEX `produk_kategori_id_foreign`(`kategori_id`) USING BTREE,
   CONSTRAINT `produk_kategori_id_foreign` FOREIGN KEY (`kategori_id`) REFERENCES `kategori` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `produk_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of produk
 -- ----------------------------
 INSERT INTO `produk` VALUES (1, 2, 2, 'BJ-01', 'Baju', 'baju1', 'baju', 'images/XM5CnSDfDX4F8m3tzZNfTXPH4yQI9OacNKdCz9QH.jpg', 10.00, '34', 89000.00, 'publish', '2022-04-19 02:21:37', '2022-04-19 02:57:25');
+INSERT INTO `produk` VALUES (2, 2, 1, 'BJ-02', 'baju aja', 'baju-aja', 'oke', NULL, 1.00, '3', 80.00, 'publish', '2022-07-06 15:10:32', '2022-07-06 15:10:32');
+INSERT INTO `produk` VALUES (3, 3, 1, 'CL-01', 'celana', 'celana', 'celanaa', NULL, 3.00, '2', 423100.00, 'publish', '2022-07-06 15:10:55', '2022-07-06 15:10:55');
 
 -- ----------------------------
 -- Table structure for produk_images
